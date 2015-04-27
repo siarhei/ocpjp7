@@ -1,1 +1,2 @@
 Working with the Assertion Mechanism (OCP Objective 6.5)
+Working with Java 7 Exception Handling (OCP Objectives 6.2 and 6.3)
