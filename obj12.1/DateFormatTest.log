@@ -1,0 +1,12 @@
+09.09.01 5:46
+09.09.2001
+09.09.01
+09.09.2001
+9 Сентябрь 2001 г.
+9 Сентябрь 2001 г.
+09.09.2001 5:46:40
+9 Сентябрь 2001 г. 5:46:40 MSD
+formatted date: 9 Сентябрь 2001 г.
+formatted datetime: 09.09.01 5:46
+parsed date: Sun Sep 09 00:00:00 MSD 2001
+parse exception occurred: java.text.ParseException: Unparseable date: "09.09.01 5:46"
