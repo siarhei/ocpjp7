@@ -1,0 +1,10 @@
+ru_RU	=>	11 Май 2015 г.
+en_US	=>	Monday, May 11, 2015
+it_IT	=>	luned? 11 maggio 2015
+it_CH	=>	luned?, 11. maggio 2015
+en_UK	=>	Monday, May 11, 2015
+pt_BR	=>	Segunda-feira, 11 de Maio de 2015
+ja	=>	2015?5?11?
+pl_PL	=>	poniedzia?ek, 11 maj 2015
+de	=>	Montag, 11. Mai 2015
+fr	=>	lundi 11 mai 2015
