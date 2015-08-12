@@ -40,8 +40,10 @@ public class NumberFormatTest {
 		out.print(nf.getMaximumFractionDigits() + "\t");
 		out.println(nf.format(f) + '\t');
 
+
 		try {
-			out.println(nf.parse("123.456"));
+			nf.setMaximumFractionDigits(3); //return back initial value
+			out.println(nf.parse("123.4567"));
 			nf.setParseIntegerOnly(true);
 			out.println(nf.parse("123.456"));
 		} catch (ParseException e) {

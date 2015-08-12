@@ -4,6 +4,8 @@ import java.util.Calendar;
 import java.text.DateFormat;
 
 public class LocaleTest {
+	private static Locale US = new Locale("en", "US");
+
 	public static void main(String[] args) {
 		final Calendar cal = Calendar.getInstance();
 		cal.set(2015, 4, 11); //11.05.2015
@@ -26,7 +28,7 @@ public class LocaleTest {
 
 	static void print(Date dt, Locale loc) {
 		DateFormat df = DateFormat.getDateInstance(DateFormat.FULL, loc);
-		System.out.println(loc.toString() + "\t=>\t" + df.format(dt));
+		System.out.println(loc.getDisplayLanguage(US) + "/" + loc.getDisplayCountry(US) + "\t=>\t" + df.format(dt));
 	}
 
 }

@@ -3,6 +3,8 @@ import java.text.*;
 import static java.lang.System.out;
 
 public class DateFormatTest {
+	private static Locale US = new Locale("en", "US");
+
 	public static void main(String[] args) {
 		Date dt = new Date(1_000_000_000_000L);
 
@@ -28,9 +30,15 @@ public class DateFormatTest {
 	}
 
 	static void parse(Date d) {
+		//default locale
 		DateFormat df = DateFormat.getDateInstance(DateFormat.FULL);
+		//DateFormat df = DateFormat.getDateInstance(DateFormat.FULL, US);
 		String dStr = df.format(d);
-		String dtStr = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT).format(d);
+
+		DateFormat dtf = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
+		//DateFormat dtf = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT, US);
+		String dtStr = dtf.format(d);
+		
 		out.println("formatted date: " + dStr);
 		out.println("formatted datetime: " + dtStr);
 

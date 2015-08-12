@@ -25,7 +25,7 @@ public class CalendarTest {
 		cl.add(Calendar.MONTH, 2);
 		out.println("added 2 m: " + cl.getTime());
 
-		cl.roll(Calendar.DAY_OF_MONTH, 5);
-		out.println("rolled 5 days: " + cl.getTime());
+		cl.roll(Calendar.DAY_OF_MONTH, 31);
+		out.println("rolled 31 days: " + cl.getTime());
 	}
 }
