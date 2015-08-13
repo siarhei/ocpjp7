@@ -2,6 +2,8 @@ Working with the Assertion Mechanism (OCP Objective 6.5)
 Working with Java 7 Exception Handling (OCP Objectives 6.2 and 6.3)
 String, StringBuilder, and StringBuffer (OCP Objective 5.1)
 - 5.1  Search, parse, and build strings (including Scanner, StringTokenizer, StringBuilder, String, and Formatter).
+- 5.2  Search, parse, and replace strings by using regular expressions, using expression patterns for matching limited to . (dot), * (star), + (plus), ?, \d, \D, \s, \S, \w, \W, \b, \B, [], and ().
+- 5.3  Format strings using the formatting parameters %b, %c, %d, %f, and %s in format strings.
 Dates, Numbers, Currencies, and Locales (OCP Objectives 12.1, 12.4, 12.5, and 12.6)
 - 12.1  Read and set the locale using the Locale object
 - 12.4  Format dates, numbers, and currency values for localization with the NumberFormat and DateFormat classes (including number format patterns).
