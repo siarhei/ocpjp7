@@ -1,6 +1,9 @@
-Working with the Assertion Mechanism (OCP Objective 6.5)
-Working with Java 7 Exception Handling (OCP Objectives 6.2 and 6.3)
-String, StringBuilder, and StringBuffer (OCP Objective 5.1)
+###Chapter 7 (Assertions and Java 7 Exceptions)
+- 6.5  Test invariants by using assertions.
+- 6.2  Develop code that handles multiple exception types in a single catch block.
+- 6.3  Develop code that uses try-with-resources statements (including using classes that implement the AutoCloseable interface).
+
+###Chapter 8 (String Processing, Data Formatting, Resource Bundles)
 - 5.1  Search, parse, and build strings (including Scanner, StringTokenizer, StringBuilder, String, and Formatter).
 - 5.2  Search, parse, and replace strings by using regular expressions, using expression patterns for matching limited to . (dot), * (star), + (plus), ?, \d, \D, \s, \S, \w, \W, \b, \B, [], and ().
 - 5.3  Format strings using the formatting parameters %b, %c, %d, %f, and %s in format strings.
@@ -9,3 +12,7 @@ Dates, Numbers, Currencies, and Locales (OCP Objectives 12.1, 12.4, 12.5, and 12
 - 12.4  Format dates, numbers, and currency values for localization with the NumberFormat and DateFormat classes (including number format patterns).
 - 12.5  Describe the advantages of localizing an application.
 - 12.6  Define a locale using language and country codes.
+
+###Chapter 9 (I/O and NIO)
+- 7.1  Read and write data from the console.
+- 7.2  Use streams to read from and write to files by using classes in the java.io package, including BufferedReader, BufferedWriter, File, FileReader, FileWriter, DataInputStream, DataOutputStream, ObjectOutputStream, ObjectInputStream, and PrintWriter.
