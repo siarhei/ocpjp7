@@ -1,0 +1,3 @@
+testing format method. It works 100%
+testing println()
+testing print()
