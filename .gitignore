@@ -1,4 +1,5 @@
 *.class
+*.tmp
 *sublime*
 
 # Mobile Tools for Java (J2ME)
