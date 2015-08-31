@@ -18,3 +18,4 @@ Dates, Numbers, Currencies, and Locales (OCP Objectives 12.1, 12.4, 12.5, and 12
 - 7.2  Use streams to read from and write to files by using classes in the java.io package, including BufferedReader, BufferedWriter, File, FileReader, FileWriter, DataInputStream, DataOutputStream, ObjectOutputStream, ObjectInputStream, and PrintWriter.
 - 8.1  Operate on file and directory paths with the Path class.
 - 8.2  Check, delete, copy, or move a file or directory with the Files class.
+- 8.3  Read and change file and directory attributes, focusing on the BasicFileAttributes, DosFileAttributes, and PosixFileAttributes interfaces.
