@@ -2,7 +2,7 @@ import java.nio.file.*;
 import java.io.*;
 
 public class DirStream {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) /*throws IOException*/ {
 		Path p = Paths.get("./..");
 		p = p.normalize();
 		System.out.println("original directory: " + p.toString());
@@ -11,6 +11,6 @@ public class DirStream {
 			for (Path pt : s) {
 				System.out.println(pt);
 			}
-		}
+		} catch (IOException e) {}
 	}
 }
