@@ -22,3 +22,6 @@ Dates, Numbers, Currencies, and Locales (OCP Objectives 12.1, 12.4, 12.5, and 12
 - 8.4  Recursively access a directory tree using the DirectoryStream and FileVisitor interfaces.
 - 8.5  Find a file with PathMatcher interface.
 - 8.6  Watch a directory for changes with the WatchServiceinterface.
+
+###Chapter 10 (Advanced OO and Design Patterns)
+- 3.5  Design a class using the singleton design pattern.
