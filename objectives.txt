@@ -25,3 +25,11 @@ Dates, Numbers, Currencies, and Locales (OCP Objectives 12.1, 12.4, 12.5, and 12
 
 ###Chapter 10 (Advanced OO and Design Patterns)
 - 3.5  Design a class using the singleton design pattern.
+
+###Chapter 11 (Generics and Collections)
+- 4.3  Use the diamond syntax to create a collection.
+- 4.4  Use wrapper classes and autoboxing.
+- 4.5  Create and use a List, a Set, and a Deque.
+- 4.6  Create and use a Map.
+- 4.7  Use java.util.Comparator and java.lang.Comparable.
+- 4.8  Sort and search arrays and lists.
