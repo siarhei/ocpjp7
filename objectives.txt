@@ -33,3 +33,5 @@ Dates, Numbers, Currencies, and Locales (OCP Objectives 12.1, 12.4, 12.5, and 12
 - 4.6  Create and use a Map.
 - 4.7  Use java.util.Comparator and java.lang.Comparable.
 - 4.8  Sort and search arrays and lists.
+- 4.1  Create a generic class.
+- 4.3  Analyze the interoperability of collections that use raw and generic types.
