@@ -10,8 +10,8 @@ public class RegularInner {
 
 		void action() {
 			System.out.println("Inner#action");
-			print(RegularInner.this.x);
-			RegularInner.this.print(x);
+			print(RegularInner.this.x);	//Inner#print(int): 1
+			RegularInner.this.print(x);	//RegularInner#print(int): 2
 		}
 
 		void print(int v) {
@@ -33,5 +33,7 @@ public class RegularInner {
 
 		RegularInner.Inner rii = ri.new Inner();
 		rii.action();
+
+		//rii = Inner.this; //error: not an enclosing class: RegularInner.Inner
 	}
 }
