@@ -35,3 +35,6 @@ Dates, Numbers, Currencies, and Locales (OCP Objectives 12.1, 12.4, 12.5, and 12
 - 4.8  Sort and search arrays and lists.
 - 4.1  Create a generic class.
 - 4.3  Analyze the interoperability of collections that use raw and generic types.
+
+###Chapter 12 (Inner Classes)
+- 2.4  Create top-level and nested classes.

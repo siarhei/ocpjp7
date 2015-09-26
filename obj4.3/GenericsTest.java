@@ -2,8 +2,12 @@ import java.util.*;
 
 public class GenericsTest {
 	public static void main(String[] args) {
+		List list = new ArrayList<String>(); //OK
 		//List<Object> listObj = new ArrayList<String>(); //error: incompatible types
 		List<String> listStr = new ArrayList<String>();
+		//listStr = list; //warning: [unchecked] unchecked conversion
+		//list = listStr; //OK
+		//list.add(new Object());//warning: [unchecked] unchecked call to add(E) as a member of the raw type List
 
 		Animal[] animals = new Animal[3];
 		fill(animals);						//compile/runtime OK
@@ -34,6 +38,9 @@ public class GenericsTest {
 		//addDogWS(listCat);				//error: method addDogWS in class GenericsTest cannot be applied to given types;
 		//addDogWS(listDog);				//error: method addDogWS in class GenericsTest cannot be applied to given types;
 		addDogWS(listAnimal);
+
+		TreeSet<Dog> ts = new TreeSet<>();
+		ts.add(new Dog()); //this is exception in runtime
 	}
 
 	private static void addDog(List list) {
