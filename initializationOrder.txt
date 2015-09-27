@@ -1,0 +1,51 @@
+class Init {
+	Init(int x) { System.out.println("1-arg const"); }
+	Init() { System.out.println("no-arg const"); }
+	static { System.out.println("1st static init"); }
+	{ System.out.println("1st instance init"); }
+	{ System.out.println("2nd instance init"); }
+	static { System.out.println("2nd static init"); }
+	public static void main(String [] args) {
+		new Init();
+		new Init(7);
+	}
+}
+
+To figure this out, remember these rules:
+1. init blocks execute in the order in which they appear.
+2. Static init blocks run once, when the class is first loaded.
+3. Instance init blocks run every time a class instance is created.
+4. Instance init blocks run after the constructor's call to super().
+
+With those rules in mind, the following output should make sense:
+1st static init
+2nd static init
+1st instance init
+2nd instance init
+no-arg const
+1st instance init
+2nd instance init
+1-arg const
+
+########
+Horse h = new Horse();
+But what reallyhappens when you say new Horse()? (Assume Horse extends 
+Animal and Animal extends Object.)
+1.  Horse constructor is invoked. Every constructor invokes the constructor 
+	of its superclass with an (implicit) call to super(), unless the constructor 
+	invokes an overloaded constructor of the same class (more on that in a 
+	minute).
+2.  Animal constructor is invoked (Animalis the superclass of Horse).
+3.  Object constructor is invoked (Objectis the ultimate superclass of all 
+	classes, so class Animal extends Object even though you don't actually type 
+	"extends Object" into the Animal class declaration. It's implicit.) At this 
+	point we're on the top of the stack.
+4.  Object instance variables are given their explicit values. By explicit values, 
+	we mean values that are assigned at the time the variables are declared, such 
+	as int x = 27, where 27 is the explicit value (as opposed to the default 
+	value) of the instance variable.
+5.  Object constructor completes.
+6.  Animal instance variables are given their explicit values (if any).
+7.  Animal constructor completes.
+8.  Horse instance variables are given their explicit values (if any).
+9.  Horse constructor completes.
