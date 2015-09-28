@@ -38,3 +38,7 @@ Dates, Numbers, Currencies, and Locales (OCP Objectives 12.1, 12.4, 12.5, and 12
 
 ###Chapter 12 (Inner Classes)
 - 2.4  Create top-level and nested classes.
+
+###Chapter 13 (Threads)
+- 10.1  Create and use the Thread class and the Runnable interface.
+- 10.2  Manage and control thread lifecycle.
