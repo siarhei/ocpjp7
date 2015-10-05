@@ -44,3 +44,6 @@ Dates, Numbers, Currencies, and Locales (OCP Objectives 12.1, 12.4, 12.5, and 12
 - 10.2  Manage and control thread lifecycle.
 - 10.3  Synchronize thread access to shared data.
 - 10.4  Identify potential threading problems.
+
+###Chapter 14 (Concurrency)
+- 11.2  Use Lock, ReadWriteLock, and ReentrantLock classes in the java.util.concurrent.locks package to support lock-free thread-safe programming on single variables.

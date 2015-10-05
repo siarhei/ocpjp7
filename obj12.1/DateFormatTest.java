@@ -21,7 +21,8 @@ public class DateFormatTest {
 			DateFormat.getDateInstance(DateFormat.LONG),
 			DateFormat.getDateInstance(DateFormat.FULL),
 			DateFormat.getDateTimeInstance(),
-			DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.FULL)
+			DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.FULL),
+			DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT, Locale.US)
 		};
 
 		for (DateFormat df : dfa) {
