@@ -29,7 +29,7 @@ no-arg const
 
 ########
 Horse h = new Horse();
-But what reallyhappens when you say new Horse()? (Assume Horse extends 
+But what really happens when you say new Horse()? (Assume Horse extends 
 Animal and Animal extends Object.)
 1.  Horse constructor is invoked. Every constructor invokes the constructor 
 	of its superclass with an (implicit) call to super(), unless the constructor 
