@@ -17,7 +17,13 @@ public class InitializationOrder {
 		//String s = Child.CHILD_STATIC_FINAL;
 
 		//6
-		String s = Parent.PARENT_STATIC;
+		//String s = Parent.PARENT_STATIC;
+
+		//7
+		//String s = Child.CHILD_STATIC_FINAL2;
+
+		//8
+		String s = Child.PARENT_STATIC;		
 	}
 }
 
@@ -39,8 +45,10 @@ class Parent {
 
 class Child extends Parent {
 	static final String CHILD_STATIC_FINAL = "";
+	static final String CHILD_STATIC_FINAL2 = empty();
 	static String CHILD_STATIC = "";
 	static void doAction() {}
+	static String empty() {return "";}
 
 	Child(int i) {
 		this();
@@ -52,6 +60,8 @@ class Child extends Parent {
 	{System.out.println("Child init");}
 	static {System.out.println("Child static init");}
 }
+
+//OUTPUT
 
 /*
 1.
@@ -83,4 +93,20 @@ Child static init
 
 /*
 5.
+*/
+
+/*
+6.
+Parent static init
+*/
+
+/*
+7.
+Parent static init
+Child static init
+*/
+
+/*
+8.
+Parent static init
 */
