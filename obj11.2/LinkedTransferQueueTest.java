@@ -39,7 +39,7 @@ public class LinkedTransferQueueTest {
 		@Override
 		public void run() {
 			try {
-				while (q.peek() != null) {
+				while (true) {
 					Thread.sleep(500);
 					boolean locked = l.tryLock();
 					if (locked) {
