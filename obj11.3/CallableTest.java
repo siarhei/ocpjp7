@@ -4,6 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
 import java.util.*;
 
 public class CallableTest {
@@ -26,6 +27,18 @@ public class CallableTest {
 			}
 		}
 		ex.shutdown();
+		try {
+			//Blocks until all tasks have completed execution after a shutdown request, or the timeout occurs, or the current thread is interrupted, whichever happens first.
+			ex.awaitTermination(2, TimeUnit.SECONDS);
+		} catch (InterruptedException e) {
+
+		} finally {
+			//Returns true if all tasks have completed following shut down.
+			if (!ex.isTerminated()) {
+				//Attempts to stop all actively executing tasks, halts the processing of waiting tasks, and returns a list of the tasks that were awaiting execution.
+				List<Runnable> terminated = ex.shutdownNow();
+			}
+		}
 		
 		System.out.format("array random values: %s%n", toString(rand));
 	}
