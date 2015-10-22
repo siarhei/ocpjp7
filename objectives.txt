@@ -50,3 +50,6 @@ Dates, Numbers, Currencies, and Locales (OCP Objectives 12.1, 12.4, 12.5, and 12
 - 11.1  Use collections from the java.util.concurrent package with a focus on the advantages over and differences from the traditional java.util collections.
 - 11.3  Use Executor, ExecutorService, Executors, Callable, and Future to execute tasks using thread pools.
 - 11.4  Use the parallel Fork/Join Framework.
+
+###Chapter 15 (JDBC)
+- 9.2  Identify the components required to connect to a database using the DriverManager class (including the JDBC URL)
