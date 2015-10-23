@@ -3,4 +3,6 @@ http://docs.oracle.com/javadb/10.8.3.0/getstart/index.html
 2. CONNECT 'jdbc:derby:toursdb;create=true';
 3. run 'ToursDB_schema.sql';
 4. run 'loadTables.sql';
-5. exit;
+5. commit; 
+6. exit;
+7. java -jar $DERBY_HOME/lib/derbyrun.jar server start

@@ -4,14 +4,21 @@ public interface DB {
 	String URL = "jdbc:derby://localhost:1527/toursdb";
 	String DRIVER = "org.apache.derby.jdbc.ClientDriver";
 
-	public static interface Tables {
+	interface Tables {
 		String AIRLINES = "AIRLINES";
 		String COUNTRIES = "COUNTRIES";
-		String CITIES = "COUNTRIES";
+		String CITIES = "CITIES";
 		String FLIGHTS = "FLIGHTS";
 		String FLIGHTAVAILABILITY = "FLIGHTAVAILABILITY";
 		String MAPS = "MAPS";
 		String FLIGHTS_HISTORY = "FLIGHTS_HISTORY";
+
+		interface Countries {
+			String TNAME = "COUNTRIES";
+			String COUNTRY = "COUNTRY";
+			String COUNTRY_ISO_CODE = "COUNTRY_ISO_CODE";
+			String REGION = "REGION";
+		}
 	}
 
 	/**

@@ -6,7 +6,7 @@ public class ConnectTest {
 		try {
 			Connection con = DriverManager.getConnection(DB.URL, null, null);
 			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM " + DB.Tables.AIRLINES);
+			ResultSet rs = st.executeQuery("SELECT * FROM " + DB.Tables.COUNTRIES);
 			ResultSetMetaData rsmd = rs.getMetaData();
 
 			rs.next();
