@@ -2,24 +2,11 @@ import static java.lang.System.*;
 import java.sql.*;
 
 public class ConnectTest {
-	static String connectionURL = "jdbc:derby://localhost:1527/firstdb";
-	static String driver = "org.apache.derby.jdbc.ClientDriver";
-
-	static {
-		try {
-			Class.forName(driver);
-		} catch (ClassNotFoundException e) {
-			out.println("cannot load derby driver");
-		} finally {
-			out.println("finished loading");
-		}
-	}
-
 	public static void main(String[] args) {
 		try {
-			Connection con = DriverManager.getConnection(connectionURL, null, null);
+			Connection con = DriverManager.getConnection(DB.URL, null, null);
 			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM Airlines");
+			ResultSet rs = st.executeQuery("SELECT * FROM " + DB.Tables.AIRLINES);
 			ResultSetMetaData rsmd = rs.getMetaData();
 
 			rs.next();
@@ -39,3 +26,17 @@ public class ConnectTest {
 }
 
 //java -cp $DERBY_HOME/lib/derbyclient.jar:. ConnectTest
+
+/*
+siarhei$ unzip -l $DERBY_HOME/lib/derbyclient.jar | grep Driver
+     7129  01-13-14 12:30   org/apache/derby/jdbc/ClientDriver.class
+      856  01-13-14 12:30   org/apache/derby/jdbc/ClientDriver40.class
+       35  01-13-14 12:31   META-INF/services/java.sql.Driver
+*/
+
+/*
+siarhei$ jar -tf $DERBY_HOME/lib/derbyclient.jar | grep Driver
+org/apache/derby/jdbc/ClientDriver.class
+org/apache/derby/jdbc/ClientDriver40.class
+META-INF/services/java.sql.Driver
+*/
