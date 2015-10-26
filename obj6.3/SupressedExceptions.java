@@ -1,8 +1,8 @@
 public class SupressedExceptions {
 	public final static void main(String args[]) {
 		try {
-			oldStyle();
-			//newStyle();
+			//oldStyle();
+			newStyle();
 		} catch (Exception e) {
 			System.out.println(e);
 			Throwable[] suppressed = e.getSuppressed();
@@ -27,7 +27,7 @@ public class SupressedExceptions {
 			res.use();
 		} catch (Exception e) {
 			System.out.println(String.format("try to rethrow %s", e.toString()));
-			throw e;
+			throw e; //is lost because of exception in finally block
 		} finally {
 			System.out.println("finally");
 			if (res != null) {

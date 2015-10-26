@@ -3,12 +3,15 @@ import static java.lang.System.out;
 import static java.sql.ResultSet.*;
 
 public class DatabaseMetaDataTest {
-	public static void main(String[] args) throws SQLException {
-		Connection c = DriverManager.getConnection(DB.URL);
-		DatabaseMetaData dbmd = c.getMetaData();
-		int[] cursotTypes = {TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE};
-		for (int cursorType : cursotTypes) {
-			isSupport(cursorType, dbmd);
+	public static void main(String[] args) {
+		try (Connection c = DriverManager.getConnection(DB.URL)) {
+			DatabaseMetaData dbmd = c.getMetaData();
+			int[] cursotTypes = {TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE};
+			for (int cursorType : cursotTypes) {
+				isSupport(cursorType, dbmd);
+			}
+		} catch (SQLException e) {
+			out.println(e);
 		}
 	}
 

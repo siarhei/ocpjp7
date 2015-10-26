@@ -2,22 +2,43 @@ import java.sql.*;
 import static java.lang.System.*;
 
 public class SelectFromCountries {
-	public static void main(String[] args) throws SQLException {
-		Connection c = DriverManager.getConnection(DB.URL, null, null);
-		Statement st = c.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-		boolean isSelect = st.execute(
-			String.format("select * from %s where %s = 'Europe' order by %s desc", 
-				DB.Tables.Countries.TNAME, 
-				DB.Tables.Countries.REGION, 
-				DB.Tables.Countries.COUNTRY_ISO_CODE));
-		if (isSelect) {
-			out.println("select query");
-			ResultSet rs = st.getResultSet();
+	public static void main(String[] args) {
+		try (Connection c = DriverManager.getConnection(DB.URL, null, null)) {
+			try (Statement st = c.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
+				boolean isSelect = st.execute(
+					String.format("select * from %s where %s = 'Europe' order by %s desc", 
+						DB.Tables.Countries.TNAME, 
+						DB.Tables.Countries.REGION, 
+						DB.Tables.Countries.COUNTRY_ISO_CODE));
+				if (isSelect) {
+					out.println("select query");
+					ResultSet rs = st.getResultSet();
 
-			out.printf("selected rows: %d%n", getSelectedRows(rs));
+					out.printf("selected rows: %d%n", getSelectedRows(rs));
 
-			print(rs);
-			//print2(rs);
+					print(rs);
+					//print2(rs);
+
+					if (rs != null) {
+						out.println("closing resultSet...");
+						rs.close();
+					}
+				}
+
+				SQLWarning warn = c.getWarnings();
+				printError(warn);
+			}//try-with-resources Statement
+		} catch (SQLException e) {
+			printError(e);	
+		}//try-with-resources Connection
+	}
+
+	private static void printError(SQLException e) {
+		while (e != null) {
+			out.format("SQLState: %s%n", e.getSQLState());
+			out.printf("Vendor error code: %d%n", e.getErrorCode());
+			out.printf("Message: %s%n", e.getMessage());
+			e = e.getNextException();
 		}
 	}
 
